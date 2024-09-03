@@ -87,11 +87,11 @@ const routes = {
     hasWorkerAction: false,
     module: route0
   },
-  "routes/_index": {
-    id: "routes/_index",
+  "routes/_tbs.home": {
+    id: "routes/_tbs.home",
     parentId: "root",
-    path: void 0,
-    index: true,
+    path: "home",
+    index: void 0,
     caseSensitive: void 0,
     hasLoader: false,
     hasAction: false,
@@ -99,11 +99,11 @@ const routes = {
     hasWorkerAction: false,
     module: route1
   },
-  "routes/home": {
-    id: "routes/home",
+  "routes/_index": {
+    id: "routes/_index",
     parentId: "root",
-    path: "home",
-    index: void 0,
+    path: void 0,
+    index: true,
     caseSensitive: void 0,
     hasLoader: false,
     hasAction: false,
@@ -4492,7 +4492,7 @@ function isRemixResponse(response) {
 }
 async function handleRequest({ defaultHandler: defaultHandler2, errorHandler, event, loadContext, routes: routes2 }) {
   var _a;
-  const isSPAMode = false;
+  const isSPAMode = true;
   const url = new URL(event.request.url);
   const routeId = url.searchParams.get("_data");
   const route = routeId ? routes2[routeId] : void 0;

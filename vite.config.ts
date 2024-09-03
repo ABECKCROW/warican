@@ -6,11 +6,11 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { copyFileSync } from "node:fs";
 
 export default defineConfig({
-  base: "/warican/",
+  base: "/Home",
   plugins: [
     remix({
       ssr: false,
-      basename: "/repository-name/",
+      basename: "/Home",
       buildEnd(args) {
         if (!args.viteConfig.isProduction) return;
         const buildPath = args.viteConfig.build.outDir;
